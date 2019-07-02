@@ -1,0 +1,44 @@
+<h1> <%= t ".page_header" %> </h1>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= form_for [:admin, @exam] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <div class="row">
+        <div class="col-xs-4">
+          <%= f.label :subject_id %>
+          <%= f.select(:subject_id, subjects, {}, {class: "form-control"}) %>
+        </div>
+        <div class="col-xs-4">
+          <%= f.label :limited_time %>
+          <%= f.text_field :limited_time, class: "form-control exam-input-value" %>
+          <div class="form-exam-errors"></div>
+        </div>
+        <div class="col-xs-4">
+          <%= f.label :exam_questions %>
+          <%= text_field_tag :exam_questions, nil, class: "form-control exam-input-value" %>
+          <div class="form-exam-errors"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-5">
+          <%= f.label :score_each_question %>
+          <%= text_field_tag :score_each_question, nil, class: "form-control exam-input-value" %>
+          <div class="form-exam-errors"></div>
+        </div>
+        <div class="col-xs-2">
+          <%= f.label t "flb_total_score" %>
+          <input type="text" class="form-control" id="exam-total-score" disabled="true">
+        </div>
+        <div class="col-xs-5">
+          <%= f.label :score %>
+          <%= f.text_field :score, class: "form-control exam-input-value" %>
+          <div class="form-exam-errors"></div>
+        </div>
+      </div>
+
+      <%= f.submit t("btn_create"), class: "btn btn-primary", id: "btn-create-exam" %>
+    <% end %>
+  </div>
+</div>

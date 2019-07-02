@@ -4,6 +4,7 @@
 $light-slate-black: #333;
 $light-cyan: #777;
 $aqua: #bbb;
+$light-pink: #ddd;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -113,4 +114,19 @@ div#error_explanation > ul {
 input.correct_answer {
   margin-top: 10px;
   margin-left: 18px;
+}
+
+table > thead.exams-table-head {
+  background-color: $light-pink;
+}
+
+.form-exam-errors {
+  margin-top: -10px;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+#btn-create-exam {
+  margin-top: 10px;
 }

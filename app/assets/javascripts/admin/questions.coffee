@@ -1,4 +1,4 @@
-$(document).ready ->
+$(document).on "turbolinks:load", ->
   $('form').on 'click', '.remove_record', (event) ->
     $(this).prev('input[type=hidden]').val '1'
     $(this).closest('ul').hide()

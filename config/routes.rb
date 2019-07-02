@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :users, except: [:show, :edit, :update]
     resources :subjects, except: :show
     resources :questions
+    resources :exams, only: [:index, :create, :new]
   end
 
   resources :users, only: [:show, :edit, :update]

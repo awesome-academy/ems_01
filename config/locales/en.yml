@@ -4,6 +4,14 @@ en:
     one: "The form contains %{count} error."
     other: "The form contains %{count} errors."
 
+  exam_minute_count:
+    one: "%{count} minute."
+    other: "%{count} minutes."
+
+  exam_question_count:
+    one: "%{count} question."
+    other: "%{count} questions."
+
   # Base title:
   base_title: "Exam Management System"
 
@@ -23,6 +31,7 @@ en:
   flb_qanswer: "Answer"
   flb_qanswer_content: "Content"
   flb_qscore: "Score"
+  flb_total_score: "Total score"
 
   # Buttons
   btn_login: "Login!"
@@ -41,6 +50,7 @@ en:
   error_message: "Sorry! Something went wrong!"
   delete_confirm: "Are you sure???"
   disable_successfully: "Disabled Successfully!"
+  subject_questions_not_enough: "is greater than subject questions (%{subject_questions})"
 
   # Links
   lk_logout: "Log out"
@@ -52,6 +62,7 @@ en:
   lk_info: "Information"
   lk_users: "Users"
   lk_question: "Question"
+  lk_exam: "Exams"
 
   # User roles
   role_admin: "Administrator"
@@ -67,6 +78,12 @@ en:
       answer:
         is_correct: "Answer"
         answer: "Content"
+      exam:
+        subject_id: "Exam subject"
+        limited_time: "Limited time (in minute) *"
+        exam_questions: "Number of questions *"
+        score_each_question: "Score for each question *"
+        score: "Exam score *"
     errors:
       models:
         answer:
@@ -75,3 +92,6 @@ en:
               blank: "is required"
             answer:
               blank: "is required"
+
+  # Model messages
+  exam_limited_time_in_range: "is invalid, should be in 5 to 1000 minutes"

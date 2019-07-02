@@ -9,10 +9,6 @@ module Admin::QuestionsHelper
       data: {id: id, fields: fields.delete("\n")})
   end
 
-  def subjects
-    @subjects = Subject.not_disable.sort_created_desc.map{|f| [f.name, f.id]}
-  end
-
   def question_types
     @question_types = Question.question_types.map{|k, v| [t(k.to_s), v]}
   end
