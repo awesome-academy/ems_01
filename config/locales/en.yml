@@ -1,4 +1,9 @@
 en:
+  # I18n count:
+  error_count:
+    one: "The form contains %{count} error."
+    other: "The form contains %{count} errors."
+
   # Base title:
   base_title: "Exam Management System"
 
@@ -8,17 +13,22 @@ en:
   # Form labels
   flb_email: "Email"
   flb_password: "Password"
+  flb_re_password: "Password confirmation"
   flb_remember_me: "Remember me"
+  flb_name: "Name"
 
   # Buttons
   btn_login: "Login!"
+  btn_update: "Update!"
 
   # Messages
   invalid_email_or_password: "Invalid email/password combination!"
   already_logged_in: "You are already logged in!"
   login_first: "Please login first!"
   access_denied: "Access denied!"
+  update_successfully: "Update Successfully!"
 
   # Links
   lk_logout: "Log out"
   lk_login: "Log in"
+  lk_edit_profile: "Edit profile"

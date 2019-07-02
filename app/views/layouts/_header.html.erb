@@ -6,6 +6,7 @@
         <% if logged_in? %>
           <li><%= link_to current_user.name, current_user %></li>
           <%= render "layouts/header/#{current_user.role}" %>
+          <li><%= link_to t("lk_edit_profile"), edit_user_path(current_user) %></li>
           <li><%= link_to t("lk_logout"), logout_path, method: :delete %></li>
         <% else %>
           <%= render "layouts/header/visitor" %>
