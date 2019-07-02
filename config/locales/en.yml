@@ -16,6 +16,8 @@ en:
   # Messages
   invalid_email_or_password: "Invalid email/password combination!"
   already_logged_in: "You are already logged in!"
+  login_first: "Please login first!"
+  access_denied: "Access denied!"
 
   # Links
   lk_logout: "Log out"
