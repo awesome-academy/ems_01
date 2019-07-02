@@ -20,4 +20,10 @@ class ApplicationController < ActionController::Base
     flash[:danger] = t "access_denied"
     redirect_to root_url
   end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user
+    render file: "public/404.html", status: :not_found, layout: false
+  end
 end
