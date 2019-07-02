@@ -1,0 +1,21 @@
+<h2> <%= t ".page_header" %> </h2>
+
+<% if @users.any? %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th> <%= t ".user_name" %> </th>
+        <th> <%= t ".user_email" %> </th>
+        <th> <%= t ".user_role" %> </th>
+        <th colspan="2"> <%= t ".option" %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @users %>
+    </tbody>
+  </table>
+<% else %>
+  <h2> <center><%= t "no_record_found" %></center> </h2>
+<% end %>
+
+<%= will_paginate %>

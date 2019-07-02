@@ -1,0 +1,22 @@
+<h1> <%= t ".page_header" %> </h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @user] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <div>
+        <%= t ".create_as" %>
+        <%= f.select(:role, user_roles, {}, {class: "form-control"}) %>
+      </div>
+
+      <%= f.label t("flb_email") %>
+      <%= f.email_field :email, class: "form-control" %>
+
+      <%= f.label t("flb_name") %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.submit t("btn_create"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

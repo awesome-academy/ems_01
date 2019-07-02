@@ -1,0 +1,8 @@
+<tr>
+  <td> <%= user.name %> </td>
+  <td> <%= user.email %> </td>
+  <td> <%= t("role_#{user.role}") %> </td>
+  <td> <%= link_to t("lk_edit"), edit_user_path(user) %> </td>
+  <td> <%= link_to t("lk_delete"), admin_user_path(user), method: :delete,
+    data: {confirm: t("delete_confirm")} unless user.admin? %> </td>
+</tr>

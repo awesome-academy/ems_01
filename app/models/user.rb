@@ -48,4 +48,8 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+  def send_account_info_email user
+    UserMailer.new_user_account(user).deliver_now
+  end
 end

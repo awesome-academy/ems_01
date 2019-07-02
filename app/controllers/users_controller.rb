@@ -23,12 +23,6 @@ class UsersController < ApplicationController
       :password_confirmation
   end
 
-  def load_user
-    @user = User.find_by id: params[:id]
-    return if @user
-    render file: "public/404.html", status: :not_found, layout: false
-  end
-
   def correct_user
     return if current_user.admin? || current_user?(@user)
     flash[:danger] = t "access_denied"

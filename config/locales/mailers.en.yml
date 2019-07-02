@@ -1,0 +1,9 @@
+en:
+  user_mailer:
+    new_user_account_subject: "User account information"
+    new_user_account:
+      welcome: "Hi and welcome!"
+      intro: "Below is your email and password to sign in the exam manager system"
+      email: "Email:"
+      password: "Password:"
+      thankyou: "Thank you!"

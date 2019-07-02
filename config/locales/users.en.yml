@@ -2,3 +2,17 @@ en:
   users:
     edit:
       page_header: "Edit"
+
+  admin:
+    users:
+      new:
+        page_header: "Create new user"
+        create_as: "Create as:"
+        trainee: "Trainee"
+        supervisor: "Supervisor"
+      index:
+        page_header: "List of users"
+        user_name: "Name"
+        user_email: "Email"
+        user_role: "Role"
+        option: "Option"
