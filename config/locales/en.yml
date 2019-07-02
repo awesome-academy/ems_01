@@ -8,6 +8,7 @@ en:
   # Form labels
   flb_email: "Email"
   flb_password: "Password"
+  flb_remember_me: "Remember me"
 
   # Buttons
   btn_login: "Login!"

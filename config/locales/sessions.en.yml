@@ -2,3 +2,4 @@ en:
   sessions:
     new:
       page_header: "Login"
+      remember: "Remember me"
