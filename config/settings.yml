@@ -3,3 +3,7 @@ user_email_max_length: 255
 user_password_min_length: 6
 
 session_remember_user: 1
+
+subject_per_page: 8
+subject_name_max_length: 50
+subject_description_max_length: 100

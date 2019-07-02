@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_05_092209) do
+ActiveRecord::Schema.define(version: 2019_07_09_090252) do
 
   create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "question_id"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 2019_07_05_092209) do
   create_table "exams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "subject_id"
     t.string "name"
-    t.integer "status"
-    t.integer "limited_time"
+    t.integer "status", default: 1
+    t.integer "limited_time", default: 30
     t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,12 +45,22 @@ ActiveRecord::Schema.define(version: 2019_07_05_092209) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "question_options", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "question_id"
+    t.string "letter"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "subject_id"
     t.text "content"
-    t.integer "type"
+    t.integer "question_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "correct_answer"
+    t.integer "score"
   end
 
   create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -18,6 +18,7 @@ gem "rubocop", "~> 0.54.0", require: false
 gem "sass-rails"
 gem "turbolinks"
 gem "uglifier"
+gem "will_paginate"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
