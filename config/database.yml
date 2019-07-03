@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  host: <%= Figaro.env.database_host %>
+  username: <%= Figaro.env.database_username %>
+  password: <%= Figaro.env.database_password %>
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: <%= Figaro.env.database_name %>
+
+test:
+  <<: *default
+  database: ems_01_test
+
+production:
+  <<: *default
+  database: ems_01_production
