@@ -1,3 +1,6 @@
 en:
   # Base title:
   base_title: "Exam Management System"
+
+  # Logo in words
+  logo: "Exam Management System"
