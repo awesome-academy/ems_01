@@ -4,3 +4,18 @@ en:
 
   # Logo in words
   logo: "Exam Management System"
+
+  # Form labels
+  flb_email: "Email"
+  flb_password: "Password"
+
+  # Buttons
+  btn_login: "Login!"
+
+  # Messages
+  invalid_email_or_password: "Invalid email/password combination!"
+  already_logged_in: "You are already logged in!"
+
+  # Links
+  lk_logout: "Log out"
+  lk_login: "Log in"
