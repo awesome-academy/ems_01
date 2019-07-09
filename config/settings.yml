@@ -1,3 +1,5 @@
 user_name_max_length: 50
 user_email_max_length: 255
 user_password_min_length: 6
+
+session_remember_user: 1
