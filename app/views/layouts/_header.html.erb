@@ -4,14 +4,11 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
-          <li><%= link_to current_user.name, "#" %></li>
-          <li><%= link_to "#", "#" %></li>
-          <li><%= link_to "#", "#" %></li>
-          <li>
-            <%= link_to t("lk_logout"), logout_path, method: :delete %>
-          </li>
+          <li><%= link_to current_user.name, current_user %></li>
+          <%= render "layouts/header/#{current_user.role}" %>
+          <li><%= link_to t("lk_logout"), logout_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to t("lk_login"), login_path %></li>
+          <%= render "layouts/header/visitor" %>
         <% end %>
       </ul>
     </nav>

@@ -11,11 +11,13 @@ class User < ApplicationRecord
     length: {maximum: Settings.user_email_max_length},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true,
-    length: {minimum: Settings.user_password_min_length}
+    length: {minimum: Settings.user_password_min_length}, allow_nil: true
 
   has_secure_password
 
   before_save{email.downcase!}
+
+  enum role: {trainee: 0, supervisor: 1, admin: 2}
 
   class << self
     def digest string
