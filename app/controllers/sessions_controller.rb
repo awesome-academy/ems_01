@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(params[:session][:password])
       log_in user
       check_remember user
-      redirect_to root_url
+      redirect_back_or user
     else
       flash.now[:danger] = t "invalid_email_or_password"
       render :new
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out if logged_in?
-    redirect_to root_url
+    redirect_to login_url
   end
 
   private
