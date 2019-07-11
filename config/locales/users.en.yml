@@ -2,3 +2,11 @@ en:
   users:
     edit:
       page_header: "Edit"
+
+  admin:
+    users:
+      new:
+        page_header: "Create new user"
+        create_as: "Create as:"
+        trainee: "Trainee"
+        supervisor: "Supervisor"
