@@ -1,0 +1,9 @@
+en:
+  admin:
+    subjects:
+      index:
+        page_header: "List of subjects"
+        sub_name: "Name"
+        sub_desc: "Description"
+      new:
+        page_header: "Create new subject"

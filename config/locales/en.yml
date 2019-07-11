@@ -16,10 +16,12 @@ en:
   flb_re_password: "Password confirmation"
   flb_remember_me: "Remember me"
   flb_name: "Name"
+  flb_desc: "Description"
 
   # Buttons
   btn_login: "Login!"
   btn_update: "Update!"
+  btn_create: "Create!"
 
   # Messages
   invalid_email_or_password: "Invalid email/password combination!"
@@ -27,8 +29,17 @@ en:
   login_first: "Please login first!"
   access_denied: "Access denied!"
   update_successfully: "Update Successfully!"
+  create_successfully: "Create Successfully!"
+  no_record_found: "No record found!"
 
   # Links
   lk_logout: "Log out"
   lk_login: "Log in"
   lk_edit_profile: "Edit profile"
+
+  # I18n Form labels
+  helpers:
+    label:
+      subject:
+        name: "Name"
+        description: "Description"
