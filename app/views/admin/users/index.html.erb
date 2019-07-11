@@ -1,0 +1,30 @@
+<h2> <%= t ".page_header" %> </h2>
+
+<% if @users.size > 0 %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th> <%= t ".user_name" %> </th>
+        <th> <%= t ".user_email" %> </th>
+        <th> <%= t ".user_role" %> </th>
+        <th colspan="2"> <%= t ".option" %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |m| %>
+        <tr>
+          <td> <%= m.name %> </td>
+          <td> <%= m.email %> </td>
+          <td> <%= m.role %> </td>
+          <td> <%= link_to t("lk_edit"), edit_user_path(m) %> </td>
+          <td> <%= link_to t("lk_delete"), admin_user_path(m), method: :delete,
+            data: {confirm: t("delete_confirm")} if !m.admin? %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h2> <center><%= t "no_record_found" %></center> </h2>
+<% end %>
+
+<%= will_paginate %>
