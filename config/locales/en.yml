@@ -31,11 +31,16 @@ en:
   update_successfully: "Update Successfully!"
   create_successfully: "Create Successfully!"
   no_record_found: "No record found!"
+  delete_successfully: "Delete Successfully!"
+  error_message: "Sorry! Something went wrong!"
+  delete_confirm: "Are you sure???"
 
   # Links
   lk_logout: "Log out"
   lk_login: "Log in"
   lk_edit_profile: "Edit profile"
+  lk_edit: "Edit"
+  lk_delete: "Delete"
 
   # I18n Form labels
   helpers:

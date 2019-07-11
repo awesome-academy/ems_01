@@ -6,6 +6,7 @@
       <tr>
         <th> <%= t ".sub_name" %> </th>
         <th> <%= t ".sub_desc" %> </th>
+        <th colspan="2"> <%= t ".option" %> </th>
       </tr>
     </thead>
     <tbody>
@@ -13,6 +14,9 @@
         <tr>
           <td> <%= s.name %> </td>
           <td> <%= s.description %> </td>
+          <td> <%= link_to t("lk_edit"), edit_admin_subject_path(s) %> </td>
+          <td> <%= link_to t("lk_delete"), admin_subject_path(s), method: :delete,
+            data: {confirm: t("delete_confirm")} %> </td>
         </tr>
       <% end %>
     </tbody>
