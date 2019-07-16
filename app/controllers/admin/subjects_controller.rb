@@ -16,8 +16,9 @@ class Admin::SubjectsController < Admin::BaseController
   end
 
   def index
-    @subjects = Subject.not_disable.sort_created_desc.paginate page: params[:page],
-      per_page: Settings.subject_per_page
+    @subjects = Subject.not_disable.sort_created_desc
+      .paginate page: params[:page], per_page: Settings.subject_per_page
+
   end
 
   def edit; end
