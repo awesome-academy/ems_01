@@ -101,3 +101,16 @@ input {
     color: $state-danger-text;
   }
 }
+
+ul {
+  list-style: none;
+}
+
+div#error_explanation > ul {
+  list-style: unset;
+}
+
+input.correct_answer {
+  margin-top: 10px;
+  margin-left: 18px;
+}

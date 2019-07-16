@@ -1,0 +1,18 @@
+<ul>
+  <li>
+    <%= f.hidden_field :_destroy %>
+    <%= link_to t("lk_delete_option"), "#", class: "remove_record" %>
+  </li>
+  <li>
+    <div class="row">
+      <div class="col-md-1 ">
+        <%= f.label :is_correct %><br>
+        <%= f.radio_button :is_correct, true, class: "correct_answer" %>
+      </div>
+      <div class="col-md-11">
+        <%= f.label :answer %>
+        <%= f.text_field :answer, class: "form-control" %>
+      </div>
+    </div>
+  </li>
+</ul>

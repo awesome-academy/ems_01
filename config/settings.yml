@@ -8,3 +8,9 @@ session_remember_user: 1
 subject_per_page: 8
 subject_name_max_length: 50
 subject_description_max_length: 100
+
+question_content_max_length: 255
+question_score_min: 1
+question_score_max: 100
+
+answer_content_max_length: 255

@@ -1,0 +1,13 @@
+en:
+  # Links
+  lk_add_options: "+ Add answer"
+  lk_delete_option: "- Delete answer"
+
+  # Question types
+  single: "Single choice"
+  multi: "Multi choice"
+
+  admin:
+    questions:
+      new:
+        page_header: "Create new question"

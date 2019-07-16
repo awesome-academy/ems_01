@@ -17,6 +17,12 @@ en:
   flb_remember_me: "Remember me"
   flb_name: "Name"
   flb_desc: "Description"
+  flb_subject: "Subject"
+  flb_qtype: "Question type"
+  flb_qcontent: "Question content"
+  flb_qanswer: "Answer"
+  flb_qanswer_content: "Content"
+  flb_qscore: "Score"
 
   # Buttons
   btn_login: "Login!"
@@ -45,6 +51,7 @@ en:
   lk_user: "User"
   lk_info: "Information"
   lk_users: "Users"
+  lk_question: "Question"
 
   # User roles
   role_admin: "Administrator"
@@ -52,8 +59,19 @@ en:
   role_supervisor: "Supervisor"
 
   # I18n Form labels
-  helpers:
-    label:
+  activerecord:
+    attributes:
       subject:
         name: "Name"
         description: "Description"
+      answer:
+        is_correct: "Answer"
+        answer: "Content"
+    errors:
+      models:
+        answer:
+          attributes:
+            is_correct:
+              blank: "is required"
+            answer:
+              blank: "is required"
