@@ -1,0 +1,19 @@
+en:
+  # Status
+  unactive: "Unactive"
+  active: "Active"
+
+  admin:
+    exams:
+      index:
+        page_header: "List of exams"
+        th_created_date: "Created Date"
+        th_subject: "Subject"
+        th_name: "Name"
+        th_status: "Status"
+        th_duration: "Duration"
+        th_question_number: "Question number"
+        th_score: "Score"
+
+      create:
+        exam_name: "Exam for %{subject_name} subject"

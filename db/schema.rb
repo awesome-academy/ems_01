@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_07_11_071937) do
     t.integer "subject_id"
     t.string "name"
     t.integer "status", default: 1
-    t.integer "limited_time", default: 30
+    t.integer "limited_time"
     t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

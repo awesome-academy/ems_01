@@ -1,0 +1,39 @@
+<h1> <%= t ".page_header" %> </h1>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <%= form_for [:admin, @question] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <div class="row">
+        <div class="col-xs-2">
+          <%= f.label t("flb_subject") %>
+          <%= f.select(:subject_id, subjects, {}, {class: "form-control"}) %>
+        </div>
+        <div class="col-xs-2">
+          <%= f.label t("flb_qtype") %>
+          <%= f.select(:question_type, question_types, {}, {class: "form-control question-question-type"}) %>
+        </div>
+        <div class="col-xs-8">
+          <%= f.label t("flb_qcontent") %>
+          <%= f.text_field :content, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="fields">
+        <%= f.fields_for :answers do |ff| %>
+          <%= render "answer", f: ff %>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-xs-12">
+            <%= link_to_add_field(t("lk_add_options"), f, :answers) %>
+          </div>
+        </div>
+      </div>
+      <%= f.submit t("btn_create"), class: "btn btn-primary", id: "create-new-question" %>
+    <% end %>
+  </div>
+</div>
